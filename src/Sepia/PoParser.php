@@ -699,7 +699,7 @@ class PoParser
      * @param array $entry
      * @return string
      */
-    protected function getEntryId(array $entry)
+    public function getEntryId(array $entry)
     {
         if (isset($entry['msgctxt'])) {
             $id = implode($this->options['multiline-glue'], (array)$entry['msgctxt']) . $this->options['context-glue'] . implode($this->options['multiline-glue'], (array)$entry['msgid']);
